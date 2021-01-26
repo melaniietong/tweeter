@@ -1,0 +1,28 @@
+form {
+  border-bottom: 5px;
+  border-color: #06080F;
+}
+
+.new-tweet {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button[type="submit"] {
+  border: 0;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+
+  background-color: #4056A1;
+
+  color: #F5F5F5;
+  font-size: 0.8em;
+  font-family: 'Bungee', sans-serif;
+}
+
+button:hover {
+  background-color: #6D82C5;
+}
