@@ -15,11 +15,26 @@ html {
  */
 
 body {
-  background-color: #f4f1ec;
-  
-  color: #545149;
+  background-color: #F5F5F5;
+
+  color: #1D2749;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 90%;
+  background-color: #F5F5F5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
