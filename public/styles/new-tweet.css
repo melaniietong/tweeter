@@ -1,17 +1,3 @@
-form {
-  border-bottom: 5px;
-  border-color: #06080F;
-}
-
-.new-tweet {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 button[type="submit"] {
   border: 0;
   padding: 0.2em 0.5em 0.2em 0.5em;
@@ -19,10 +5,55 @@ button[type="submit"] {
   background-color: #4056A1;
 
   color: #F5F5F5;
-  font-size: 0.8em;
-  font-family: 'Bungee', sans-serif;
 }
 
 button:hover {
   background-color: #6D82C5;
+}
+
+label[for="tweet-text"], textarea[name="text"] {
+  padding: 10px;
+
+  font-size: 0.8em;
+}
+
+label[for="tweet-text"] {
+  width: 60%;
+  position: absolute;
+}
+
+textarea[name="text"] {
+  height: 100px;
+  width: 100%;
+  resize: vertical;
+
+  border: 0px;
+  border-color: black;
+  border-bottom: 5px;
+
+  background-color: #FFFFFF;
+}
+
+textarea:focus {
+  outline: none;
+
+}
+
+.new-tweet {
+  width: 70%;
+  margin: 50px 0px 50px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tweet-footer {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.8em;
+  font-family: 'Bungee', sans-serif;
 }
