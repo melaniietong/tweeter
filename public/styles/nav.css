@@ -1,3 +1,12 @@
-.logo {
-  font-family: 'Bungee', sans-serif;
+nav {
+  height: 120px;
+  width: 100%;
+  padding: 1.5em;
+
+  background-color: #4056A1;
+  color: #FFFFFF;
  }
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
