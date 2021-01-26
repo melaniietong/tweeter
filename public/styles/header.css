@@ -1,0 +1,13 @@
+header {
+  height: 400px;
+  width: 100%;
+
+  background-color: #F5F5F5;
+  background-image: url("../images/axiom-pattern.png");
+  background-repeat: repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
