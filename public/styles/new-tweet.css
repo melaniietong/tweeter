@@ -11,27 +11,18 @@ button:hover {
   background-color: #6D82C5;
 }
 
-label[for="tweet-text"], textarea[name="text"] {
-  padding: 10px;
-
-  font-size: 0.8em;
-}
-
-label[for="tweet-text"] {
-  width: 60%;
-  position: absolute;
-}
-
 textarea[name="text"] {
   height: 100px;
   width: 100%;
   resize: vertical;
+  padding: 10px;
 
   border: 0px;
-  border-color: black;
-  border-bottom: 5px;
+  border-bottom: 5px solid #4056A1;
 
   background-color: #FFFFFF;
+
+  font-size: 0.8em;
 }
 
 textarea:focus {
@@ -57,3 +48,4 @@ textarea:focus {
   font-size: 0.8em;
   font-family: 'Bungee', sans-serif;
 }
+
