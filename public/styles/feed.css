@@ -16,16 +16,24 @@
   margin-right: 30px;
 }
 
+.tweet {
+  padding: 25px;
+}
+
 .userHandle {
   margin-left: auto;
   margin-right: 30px;
 
-  display: none;
+  opacity: 0.5;
+
+  visibility: hidden;
 }
 
 article {
   padding: 30px 50px 30px 50px;
   margin: 20px 0px 20px 0px;
+
+  background-color: #FFFFFF;
 
   display: flex;
   flex-direction: column;
@@ -38,10 +46,6 @@ article address {
   font-style: normal;
 }
 
-.tweet {
-  padding: 25px;
-}
-
 article header {
   display: flex;
   flex-direction: row;
@@ -49,8 +53,16 @@ article header {
   align-items: center;
 }
 
+article:hover {
+  box-shadow: 10px 10px #C0C0C0;
+}
+
+article:hover > * > .userHandle {
+  visibility: unset;
+}
+
 footer {
-  padding: 0px 25px 0px 25px;
+  padding: 0px 25px 10px 25px;
 
   display: flex;
   flex-direction: row;
