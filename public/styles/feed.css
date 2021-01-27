@@ -1,37 +1,27 @@
 .actions img {
-  background-color:wheat;
-
   width: 20px;
   margin: 5px;
   margin-top: 14px;
 }
 
 .feed {
-  background-color:yellow;
-
   margin-top: 50px;
   display: flex;
   flex-direction: column;
 }
 
 .profilePic {
-  background-color:teal;
-
   width: 80px;
   margin: 30px;
   margin-right: 30px;
 }
 
 .userHandle {
-  background-color: yellowgreen;
-
   margin-left: auto;
   margin-right: 30px;
 }
 
 article {
-  background-color:white;
-
   padding: 30px 50px 30px 50px;
   margin: 20px 0px 20px 0px;
 
@@ -42,8 +32,6 @@ article {
 }
 
 article address {
-  background-color:tomato;
-
   font-size: 1em;
 }
 
@@ -52,14 +40,10 @@ article address {
 }
 
 article header {
-  margin: 0;
-  padding: 0;
-
-  background-color:violet;
-  
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 }
 
 footer {
