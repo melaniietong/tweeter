@@ -30,15 +30,6 @@ textarea:focus {
 
 }
 
-.new-tweet {
-  width: 70%;
-  margin: 50px 0px 50px 0px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .tweet-footer {
   margin-top: 10px;
 

@@ -10,10 +10,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   background-color: #F5F5F5;
 
@@ -37,6 +33,11 @@ main {
   align-items: center;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.new-tweet {
+  width: 70%;
+  margin: 50px 0px 50px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
