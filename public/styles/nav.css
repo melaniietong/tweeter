@@ -12,6 +12,9 @@ nav {
   width: 100%;
   padding: 1.5em;
 
+  position: fixed;
+  top: 0;
+
   background-color: #4056A1;
   color: #F5F5F5;
 
