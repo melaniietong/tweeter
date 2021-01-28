@@ -63,17 +63,17 @@ $(document).ready(function(){
       event.preventDefault();
 
       if (inputOnly === "" || inputOnly === null || decodeURI(inputOnly).trim().length === 0) {
-        alert("ERROR: Submission empty. Please write something first.");
+        document.getElementsByClassName("submit-error")[0].innerHTML = "⚠️ Empty. Please write something first.";
       } else if (inputOnly.length >= 140) {
-        alert("ERROR: Submission over 140 characters. Please shorten it before submitting.");
+        document.getElementsByClassName("submit-error")[0].innerHTML = "⚠️ Over 140 characters. Please shorten your submission.";
       } else {
         $.post("/tweets/", input, () => {
-          console.log("Form successfully submitted.");
-
+          document.getElementsByClassName("submit-error")[0].innerHTML = "";
           textboxArea.val("");
+
           $.ajax('/tweets/', { method: 'GET' })
             .then(function(data) {
-              const submittedTweet = createTweetElement([data[data.length-1]]);
+              const submittedTweet = createTweetElement([data[data.length-1]]); // Gets the last submitted tweet.
               $(".feed").append(submittedTweet);
           });
         });
