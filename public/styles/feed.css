@@ -17,6 +17,7 @@
 
 .tweet {
   padding: 15px;
+  word-wrap: break-word;
 }
 
 .userHandle {
