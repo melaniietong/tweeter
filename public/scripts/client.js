@@ -55,4 +55,16 @@ $(document).ready(function(){
   const $tweet = createTweetElement(tweetData);
 
   $('.feed').append($tweet);
+
+  $(function() {
+    const $button = $('#submit-tweet');
+
+    $button.submit(function(event) {
+      event.preventDefault();
+
+      $.post('/tweets/', $("#tweet-text").serialize(), () => {
+        console.log('Form successfully submitted.');
+      })
+    });
+  });
 });
