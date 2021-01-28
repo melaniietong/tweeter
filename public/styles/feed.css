@@ -41,6 +41,7 @@ article {
   padding: 20px 30px 20px 30px;
   margin: 20px 0px 20px 0px;
 
+  border-radius: 15px;
   background-color: #FFFFFF;
 
   display: flex;
