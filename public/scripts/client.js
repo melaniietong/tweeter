@@ -54,22 +54,28 @@ const createTweetElement = function(data) {
 $(document).ready(function(){  
   $(function() {
     const $button = $("#submit-tweet");
+    const textboxArea = $("#tweet-text");
 
     $button.submit(function(event) {
-      const input = $("#tweet-text").serialize();
+      const input = textboxArea.serialize();
       const inputOnly = input.slice(5);
+
+      event.preventDefault();
 
       if (inputOnly === "" || inputOnly === null || decodeURI(inputOnly).trim().length === 0) {
         alert("ERROR: Submission empty. Please write something first.");
-        event.preventDefault();
       } else if (inputOnly.length >= 140) {
         alert("ERROR: Submission over 140 characters. Please shorten it before submitting.");
-        event.preventDefault();
       } else {
         $.post("/tweets/", input, () => {
           console.log("Form successfully submitted.");
 
-          
+          textboxArea.val("");
+          $.ajax('/tweets/', { method: 'GET' })
+            .then(function(data) {
+              const submittedTweet = createTweetElement([data[data.length-1]]);
+              $(".feed").append(submittedTweet);
+          });
         });
       }
     });
@@ -77,7 +83,7 @@ $(document).ready(function(){
 
   $.ajax('/tweets/', { method: 'GET' })
     .then(function(data) {
-      const $tweet = createTweetElement(data);
-      $(".feed").append($tweet);
+      const tweet = createTweetElement(data);
+      $(".feed").append(tweet);
   });
 });
