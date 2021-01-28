@@ -15,6 +15,11 @@
   margin: 15px;
 }
 
+.submit-error {
+  color: red;
+  font-size: 0.6em;
+}
+
 .tweet {
   padding: 15px;
   word-wrap: break-word;
