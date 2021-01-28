@@ -52,19 +52,21 @@ const createTweetElement = function(data) {
 };
 
 $(document).ready(function(){  
-  const $tweet = createTweetElement(tweetData);
-
-  $('.feed').append($tweet);
-
   $(function() {
-    const $button = $('#submit-tweet');
+    const $button = $("#submit-tweet");
 
     $button.submit(function(event) {
       event.preventDefault();
 
-      $.post('/tweets/', $("#tweet-text").serialize(), () => {
-        console.log('Form successfully submitted.');
+      $.post("/tweets/", $("#tweet-text").serialize(), () => {
+        console.log("Form successfully submitted.");
       })
     });
+  });
+
+  $.ajax('/tweets/', { method: 'GET' })
+    .then(function(data) {
+      const $tweet = createTweetElement(data);
+      $(".feed").append($tweet);
   });
 });
