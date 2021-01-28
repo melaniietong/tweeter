@@ -56,11 +56,22 @@ $(document).ready(function(){
     const $button = $("#submit-tweet");
 
     $button.submit(function(event) {
-      event.preventDefault();
+      const input = $("#tweet-text").serialize();
+      const inputOnly = input.slice(5);
 
-      $.post("/tweets/", $("#tweet-text").serialize(), () => {
-        console.log("Form successfully submitted.");
-      })
+      if (inputOnly === "" || inputOnly === null || decodeURI(inputOnly).trim().length === 0) {
+        alert("ERROR: Submission empty. Please write something first.");
+        event.preventDefault();
+      } else if (inputOnly.length >= 140) {
+        alert("ERROR: Submission over 140 characters. Please shorten it before submitting.");
+        event.preventDefault();
+      } else {
+        $.post("/tweets/", input, () => {
+          console.log("Form successfully submitted.");
+
+          
+        });
+      }
     });
   });
 
