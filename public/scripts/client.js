@@ -26,7 +26,7 @@ const createTweetElement = function(data) {
   return tweets;
 };
 
-$(document).ready(function(){  
+$(document).ready(function() {
   $(function() {
     const $button = $("#submit-tweet");
     const textboxArea = $("#tweet-text");
@@ -48,9 +48,11 @@ $(document).ready(function(){
         $.post("/tweets/", input, () => {
           textboxArea.val("");
 
-          $.ajax('/tweets/', { method: 'GET' })
+          $.ajax('/tweets/', {method: 'GET'})
             .then(function(data) {
-              const submittedTweet = createTweetElement([data[data.length-1]]); // Gets the last submitted tweet.
+              // Gets the last submitted tweet.
+              const submittedTweet = createTweetElement([data[data.length - 1]]); 
+
               $(".feed").append(submittedTweet);
           });
         });
@@ -58,9 +60,10 @@ $(document).ready(function(){
     });
   });
 
-  $.ajax('/tweets/', { method: 'GET' })
+  $.ajax('/tweets/', {method: 'GET'})
     .then(function(data) {
       const tweet = createTweetElement(data);
       $(".feed").append(tweet);
-  });
+    }
+  );
 });
