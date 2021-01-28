@@ -2,6 +2,8 @@
   width: 20px;
   margin: 5px;
   margin-top: 14px;
+
+  visibility: hidden;
 }
 
 .empty-error, .over-error {
@@ -67,6 +69,10 @@ article:hover {
 }
 
 article:hover > * > .userHandle {
+  visibility: unset;
+}
+
+article:hover > * > .actions img {
   visibility: unset;
 }
 
