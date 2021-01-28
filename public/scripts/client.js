@@ -57,18 +57,20 @@ $(document).ready(function(){
     const textboxArea = $("#tweet-text");
 
     $button.submit(function(event) {
+      $( ".empty-error" ).hide();
+      $( ".over-error" ).hide();
+
       const input = textboxArea.serialize();
       const inputOnly = input.slice(5);
 
       event.preventDefault();
 
       if (inputOnly === "" || inputOnly === null || decodeURI(inputOnly).trim().length === 0) {
-        document.getElementsByClassName("submit-error")[0].innerHTML = "⚠️ Empty. Please write something first.";
+        $( ".empty-error" ).slideDown( "slow");
       } else if (inputOnly.length >= 140) {
-        document.getElementsByClassName("submit-error")[0].innerHTML = "⚠️ Over 140 characters. Please shorten your submission.";
+        $( ".over-error" ).slideDown( "slow");
       } else {
         $.post("/tweets/", input, () => {
-          document.getElementsByClassName("submit-error")[0].innerHTML = "";
           textboxArea.val("");
 
           $.ajax('/tweets/', { method: 'GET' })

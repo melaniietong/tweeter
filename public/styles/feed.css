@@ -4,6 +4,13 @@
   margin-top: 14px;
 }
 
+.empty-error, .over-error {
+  display: none;
+
+  color: red;
+  font-size: 0.6em;
+}
+
 .feed {
   margin-top: 50px;
   display: flex;
@@ -13,11 +20,6 @@
 .profilePic {
   width: 80px;
   margin: 15px;
-}
-
-.submit-error {
-  color: red;
-  font-size: 0.6em;
 }
 
 .tweet {
