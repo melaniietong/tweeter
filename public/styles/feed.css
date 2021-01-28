@@ -22,7 +22,7 @@
 
 .userHandle {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 15px;
 
   opacity: 0.5;
 
@@ -62,7 +62,7 @@ article:hover > * > .userHandle {
 }
 
 footer {
-  padding: 0px 25px 10px 25px;
+  padding: 0px 15px 10px 15px;
 
   display: flex;
   flex-direction: row;
