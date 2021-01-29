@@ -23,13 +23,13 @@ nav {
   justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px)  {
   menu {
-    font-size: 3.5vw;
+    font-size: 2vw;
   }
 
   nav span {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
   nav {
