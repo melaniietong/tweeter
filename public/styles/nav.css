@@ -22,3 +22,17 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 1024px) {
+  menu {
+    font-size: 3.5vw;
+  }
+
+  nav span {
+    font-size: 5vw;
+  }
+
+  nav {
+    height: 1vh;
+  }
+}
