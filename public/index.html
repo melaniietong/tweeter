@@ -34,31 +34,32 @@
     </nav>
 
     <!-- User profile -->
-    <header class="profile">
-      <div>
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-        <h2>Your Name</h2>
-      </div>
-    </header>
+    <div class="rd-desktop">
+      <header class="profile">
+        <div>
+          <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+          <h2>Your Name</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/" id="submit-tweet">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="tweet-footer">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-          <p class="empty-error">⚠️ Empty. Please write something first.</p>
-          <p class="over-error">⚠️ Over 140 characters. Please shorten your submission.</p>
-        </form>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <form method="POST" action="/tweets/" id="submit-tweet">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="tweet-footer">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+            <p class="empty-error">⚠️ Empty. Please write something first.</p>
+            <p class="over-error">⚠️ Over 140 characters. Please shorten your submission.</p>
+          </form>
 
-        <div class="feed"></div>
-      </section>
-    </main>
+          <div class="feed"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
