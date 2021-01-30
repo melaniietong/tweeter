@@ -47,6 +47,7 @@ $(document).ready(function() {
       } else {
         $.post("/tweets/", input, () => {
           textboxArea.val("");
+          $(".counter").val("140");
 
           $.ajax('/tweets/', {method: 'GET'})
             .then(function(data) {
