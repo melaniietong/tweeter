@@ -7,15 +7,19 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 > Write tweets to share. Feed is automatically updated.
+
 !["Screenshot of Tweeter"](https://github.com/melaniietong/tweeter/blob/master/public/images/screenshots/ss1.png?raw=true)
 
 > More info is shown when a post is hovered.
+
 !["Screenshot of post hover"](https://github.com/melaniietong/tweeter/blob/master/public/images/screenshots/ss3.png?raw=true)
 
 > When tweets are empty or over the max 140 character count, users are shown an error.
+
 !["Screenshot of max character error"](https://github.com/melaniietong/tweeter/blob/master/public/images/screenshots/ss2.png?raw=true)
 
 > Responsive design is utilized! 
+
 !["Screenshot of responsiveness"](https://github.com/melaniietong/tweeter/blob/master/public/images/screenshots/ss4.png?raw=true)
 
 ## Dependencies
